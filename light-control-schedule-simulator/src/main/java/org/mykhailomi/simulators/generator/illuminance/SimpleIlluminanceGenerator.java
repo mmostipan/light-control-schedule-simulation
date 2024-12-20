@@ -4,9 +4,9 @@ public interface SimpleIlluminanceGenerator {
 	
 	/**
 	 * 
-	 * @param hour - time of day [h].
-	 * @return light intensity (lux).
+	 * @param hour - time (in h).
+	 * @return light intensity (in lux).
 	 */
-	int get(int hour);
+	double get(int hour) throws IllegalArgumentException ;
 	
 }

@@ -1,5 +1,5 @@
 package org.mykhailomi.simulators.lamps;
 
-public interface Lamp {
+public class Lamp {
 
 }
