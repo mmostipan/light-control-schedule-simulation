@@ -36,7 +36,7 @@ public class SimpleIlluminanceGeneratorImpl implements SimpleIlluminanceGenerato
 	public double get(int hour) throws IllegalArgumentException {
 		LOGGER.debug("hour={}", hour);
 		
-		if (!(hour >=0 && hour <= 24)) { throw new IllegalArgumentException("hour is wrong."); }
+		if (hour < 0 || hour > 23) { throw new IllegalArgumentException("hour must be in range from 0 to 23."); }
 		
 		int[] hours = coordinates.keySet().stream().mapToInt(Integer::intValue).toArray();
 		

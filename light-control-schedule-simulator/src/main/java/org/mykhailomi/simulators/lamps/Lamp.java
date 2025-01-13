@@ -1,5 +1,9 @@
 package org.mykhailomi.simulators.lamps;
 
-public class Lamp {
+public interface Lamp {
+	
+	void on();
+	
+	void off();
 
 }

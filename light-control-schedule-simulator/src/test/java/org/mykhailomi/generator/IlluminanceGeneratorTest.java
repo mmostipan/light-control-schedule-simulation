@@ -12,7 +12,7 @@ class IlluminanceGeneratorTest {
 
 	@Test
 	void test() {
-		double lux = new SimpleIlluminanceGeneratorImpl().get(0);
+		double lux = new SimpleIlluminanceGeneratorImpl().get(22);
 		
 		LOGGER.info("lux={}", lux);
 		
