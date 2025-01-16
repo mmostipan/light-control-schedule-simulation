@@ -8,12 +8,12 @@ public class LedLamp220VWhite implements Lamp {
 
 	@Override
 	public void on() {
-		LOGGER.info("{} has been on.", LedLamp220VWhite.class.getName());
+		LOGGER.info("LedLamp220VWhite has been on.");
 	}
 
 	@Override
 	public void off() {
-		LOGGER.info("{} has been on.", LedLamp220VWhite.class.getName());
+		LOGGER.info("LedLamp220VWhite has been off.");
 	}
 
 }

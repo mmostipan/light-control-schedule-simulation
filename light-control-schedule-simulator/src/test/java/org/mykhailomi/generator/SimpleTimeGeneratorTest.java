@@ -14,8 +14,8 @@ class SimpleTimeGeneratorTest {
 	void test() {
 		SimpleTimeGeneratorImpl stg = new SimpleTimeGeneratorImpl();
 		stg.setHour(12);
-		stg.setMinutes(45);
-		stg.setSeconds(59);
+		stg.setMinute(45);
+		stg.setSecond(59);
 		
 		stg.nextHour();
 		stg.nextMinute();
@@ -26,9 +26,9 @@ class SimpleTimeGeneratorTest {
 		
 		assertEquals(14, stg.getHour());
 		
-		assertEquals(17, stg.getMinutes());
+		assertEquals(17, stg.getMinute());
 		
-		assertEquals(0, stg.getSeconds());
+		assertEquals(0, stg.getSecond());
 	}
 
 }

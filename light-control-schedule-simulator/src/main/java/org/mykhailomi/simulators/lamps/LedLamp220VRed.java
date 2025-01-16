@@ -8,11 +8,11 @@ public class LedLamp220VRed implements Lamp {
 
 	@Override
 	public void on() {
-		LOGGER.info("{} has been on.", LedLamp220VRed.class.getName());
+		LOGGER.info("LedLamp220VRed has been on.");
 	}
 
 	@Override
 	public void off() {
-		LOGGER.info("{} has been on.", LedLamp220VRed.class.getName());
+		LOGGER.info("LedLamp220VRed has been off.");
 	}
 }

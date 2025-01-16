@@ -2,79 +2,100 @@ package org.mykhailomi.simulators.generator.time;
 
 public class SimpleTimeGeneratorImpl implements SimpleTimeGenerator {
 	
+	private int day;
+	
 	private int hour; // 0-23
 	
-	private int minutes; // 0-59
+	private int minute; // 0-59
 	
-	private int seconds; // 0-59
+	private int second; // 0-59
 	
 	public SimpleTimeGeneratorImpl() {
+		day = 0;
 		hour = 0;
-		minutes = 0;
-		seconds = 0;
+		minute = 0;
+		second = 0;
 	}
 
 	@Override
 	public void nextHour() {
-		if (++hour == 24) { hour = 0; }
+		if (++hour == 24) { hour = 0; day++; }
 	}
 	
 	@Override
 	public void nextMinute() {
-		if (++minutes == 60) { minutes = 0; nextHour(); }
+		if (++minute == 60) { minute = 0; nextHour(); }
 	}
 	
 	@Override
 	public void nextSecond() {
-		if (++seconds == 60) { seconds = 0; nextMinute(); }
+		if (++second == 60) { second = 0; nextMinute(); }
 	}
 	
 	@Override
 	public void nextHalfHour() {
-		minutes += 30;
+		minute += 30;
 		
-		if (minutes >= 60) { minutes = minutes - 60; nextHour(); }
+		if (minute >= 60) { minute = minute - 60; nextHour(); }
 	}
 
 	@Override
 	public void reset() {
+		day = 0;
 		hour = 0;
-		minutes = 0;
-		seconds = 0;
+		minute = 0;
+		second = 0;
+	}
+	
+	@Override
+	public int getDay() {
+		return day;
 	}
 
+	@Override
+	public void setDay(int day) {
+		this.day = day;
+	}
+
+	@Override
 	public int getHour() {
 		return hour;
 	}
-
+	
+	@Override
 	public void setHour(int hour) {
 		if (hour < 0 || hour > 23) { throw new IllegalArgumentException("hour must be in range from 0 to 23."); }
 		
 		this.hour = hour;
 	}
 
-	public int getMinutes() {
-		return minutes;
+	@Override
+	public int getMinute() {
+		return minute;
 	}
 
-	public void setMinutes(int minutes) {
+	@Override
+	public void setMinute(int minutes) {
 		if (minutes < 0 || minutes > 59) { throw new IllegalArgumentException("minutes must be in range from 0 to 59."); }
 
-		this.minutes = minutes;
+		this.minute = minutes;
 	}
 
-	public int getSeconds() {
-		return seconds;
+	@Override
+	public int getSecond() {
+		return second;
 	}
 
-	public void setSeconds(int seconds) {
+	@Override
+	public void setSecond(int seconds) {
 		if (seconds < 0 || seconds > 59) { throw new IllegalArgumentException("seconds must be in range from 0 to 59."); }
 
-		this.seconds = seconds;
+		this.second = seconds;
 	}
 	
+	@Override
 	public String getPrettyFormat() {
-		return String.format("%02d:%02d:%02d", hour, minutes, seconds);
+		return String.format("%02d %02d:%02d:%02d", day, hour, minute, second);
 	}
 	
 }
