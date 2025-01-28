@@ -1,6 +1,9 @@
 package org.mykhailomi.simulators.function.linearinterpolation;
 
-public class LinearInterpolationimpl implements LinearInterpolation {
+import org.springframework.stereotype.Component;
+
+@Component("linearInterpolation")
+public class LinearInterpolationImpl implements LinearInterpolation {
 
 	@Override
 	public double calculate(LICoordinates coordinates, double x)throws IllegalArgumentException {

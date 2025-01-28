@@ -3,13 +3,12 @@ package org.mykhailomi.simulators.simulator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mykhailomi.simulators.generator.illuminance.SimpleIlluminanceGenerator;
-import org.mykhailomi.simulators.generator.illuminance.SimpleIlluminanceGeneratorImpl;
 import org.mykhailomi.simulators.generator.time.SimpleTimeGenerator;
-import org.mykhailomi.simulators.generator.time.SimpleTimeGeneratorImpl;
 import org.mykhailomi.simulators.lamps.Lamp;
-import org.mykhailomi.simulators.lamps.LedLamp220VRed;
-import org.mykhailomi.simulators.lamps.LedLamp220VWhite;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("lightControlScheduleSimulator")
 public class LightControlScheduleSimulatorImpl implements LightControlScheduleSimulator {
 	private static final Logger LOGGER = LogManager.getLogger(LightControlScheduleSimulatorImpl.class);
 
@@ -27,13 +26,15 @@ public class LightControlScheduleSimulatorImpl implements LightControlScheduleSi
 	
 	private boolean isSecondLampOn;
 	
-	public LightControlScheduleSimulatorImpl() {
-		illuminanceGenerator = new SimpleIlluminanceGeneratorImpl();
-		timeGenerator = new SimpleTimeGeneratorImpl();
-		
-		ledLamp220VRed = new LedLamp220VRed();
-		ledLamp220VWhite = new LedLamp220VWhite();
-		
+	public LightControlScheduleSimulatorImpl(SimpleIlluminanceGenerator illuminanceGenerator,
+			SimpleTimeGenerator timeGenerator,
+			@Qualifier("ledLamp220VRed") Lamp ledLamp220VRed,
+			@Qualifier("ledLamp220VWhite") Lamp ledLamp220VWhite) {
+		this.illuminanceGenerator = illuminanceGenerator;
+		this.timeGenerator = timeGenerator;
+		this.ledLamp220VRed = ledLamp220VRed;
+		this.ledLamp220VWhite = ledLamp220VWhite;
+
 		isFirstLampOn = false;
 		isSecondLampOn = false;
 	}

@@ -1,5 +1,8 @@
 package org.mykhailomi.simulators.generator.time;
 
+import org.springframework.stereotype.Component;
+
+@Component("timeGenerator")
 public class SimpleTimeGeneratorImpl implements SimpleTimeGenerator {
 	
 	private int day;

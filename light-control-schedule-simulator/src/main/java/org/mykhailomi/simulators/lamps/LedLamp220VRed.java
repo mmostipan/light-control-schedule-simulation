@@ -2,7 +2,9 @@ package org.mykhailomi.simulators.lamps;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.stereotype.Component;
 
+@Component("ledLamp220VRed")
 public class LedLamp220VRed implements Lamp {
 	private static final Logger LOGGER = LogManager.getLogger(LedLamp220VRed.class);
 

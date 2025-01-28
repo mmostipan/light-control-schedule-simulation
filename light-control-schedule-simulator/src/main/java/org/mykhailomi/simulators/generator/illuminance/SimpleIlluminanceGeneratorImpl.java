@@ -7,9 +7,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mykhailomi.simulators.function.linearinterpolation.LICoordinates;
 import org.mykhailomi.simulators.function.linearinterpolation.LinearInterpolation;
-import org.mykhailomi.simulators.function.linearinterpolation.LinearInterpolationimpl;
 import org.mykhailomi.simulators.search.SearchUtils;
+import org.springframework.stereotype.Component;
 
+@Component("illuminanceGenerator")
 public class SimpleIlluminanceGeneratorImpl implements SimpleIlluminanceGenerator {
 	private static final Logger LOGGER = LogManager.getLogger(SimpleIlluminanceGeneratorImpl.class);
 
@@ -17,8 +18,8 @@ public class SimpleIlluminanceGeneratorImpl implements SimpleIlluminanceGenerato
 	
 	private final Map<Integer, LICoordinates> coordinates;
 	
-	public SimpleIlluminanceGeneratorImpl() {
-		linearInterpolation = new LinearInterpolationimpl();
+	public SimpleIlluminanceGeneratorImpl(LinearInterpolation linearInterpolation) {
+		this.linearInterpolation = linearInterpolation;
 		
 		coordinates = new LinkedHashMap<>();
 		coordinates.put(0, new LICoordinates(0, -3.1, 3, -3.1));
