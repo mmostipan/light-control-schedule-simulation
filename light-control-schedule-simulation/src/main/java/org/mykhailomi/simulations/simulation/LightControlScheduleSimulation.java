@@ -1,6 +1,6 @@
 package org.mykhailomi.simulations.simulation;
 
-public interface LightControlScheduleSimulator {
+public interface LightControlScheduleSimulation {
 	
 	void start(int days);
 	

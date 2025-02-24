@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("lightControlScheduleSimulator")
-public class LightControlScheduleSimulatorImpl implements LightControlScheduleSimulator {
-	private static final Logger LOGGER = LogManager.getLogger(LightControlScheduleSimulatorImpl.class);
+public class LightControlScheduleSimulationImpl implements LightControlScheduleSimulation {
+	private static final Logger LOGGER = LogManager.getLogger(LightControlScheduleSimulationImpl.class);
 
 	private static final int DARK_IN_LUX = 5;
 	
@@ -26,7 +26,7 @@ public class LightControlScheduleSimulatorImpl implements LightControlScheduleSi
 	
 	private boolean isSecondLampOn;
 	
-	public LightControlScheduleSimulatorImpl(SimpleIlluminanceGenerator illuminanceGenerator,
+	public LightControlScheduleSimulationImpl(SimpleIlluminanceGenerator illuminanceGenerator,
 			SimpleTimeGenerator timeGenerator,
 			@Qualifier("ledLamp220VRed") Lamp ledLamp220VRed,
 			@Qualifier("ledLamp220VWhite") Lamp ledLamp220VWhite) {
