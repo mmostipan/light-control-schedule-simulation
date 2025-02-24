@@ -10,8 +10,8 @@ public class App {
 	
 	public static void main(String[] args) {
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfiguration.class);
-		LightControlScheduleSimulation simulator = ctx.getBean("lightControlScheduleSimulator", LightControlScheduleSimulation.class);
-		simulator.start(1);
+		LightControlScheduleSimulation simulation = ctx.getBean("lightControlScheduleSimulator", LightControlScheduleSimulation.class);
+		simulation.start(1);
 		
 		((ConfigurableApplicationContext) ctx).close();
 	}
