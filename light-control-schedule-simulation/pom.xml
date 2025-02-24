@@ -6,7 +6,7 @@
 	<groupId>org.mykhailomi.simulations</groupId>
 	<artifactId>light-control-schedule-simulation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LightControlScheduleSimulator</name>
+	<name>LightControlScheduleSimulation</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
