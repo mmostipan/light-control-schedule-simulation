@@ -1,4 +1,4 @@
-package org.mykhailomi.simulations.lamps;
+package org.mykhailomi.light_control_schedule_simulation.lamps;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

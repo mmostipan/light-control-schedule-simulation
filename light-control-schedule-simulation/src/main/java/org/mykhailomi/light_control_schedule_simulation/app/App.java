@@ -1,7 +1,7 @@
-package org.mykhailomi.simulations.app;
+package org.mykhailomi.light_control_schedule_simulation.app;
 
-import org.mykhailomi.simulations.conf.AppConfiguration;
-import org.mykhailomi.simulations.simulation.LightControlScheduleSimulation;
+import org.mykhailomi.light_control_schedule_simulation.app.conf.AppConfiguration;
+import org.mykhailomi.light_control_schedule_simulation.simulation.LightControlScheduleSimulation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

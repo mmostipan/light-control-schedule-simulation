@@ -1,13 +1,13 @@
-package org.mykhailomi.simulations.generator.illuminance;
+package org.mykhailomi.light_control_schedule_simulation.generator.illuminance;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.mykhailomi.simulations.function.linear_interpolation.LICoordinates;
-import org.mykhailomi.simulations.function.linear_interpolation.LinearInterpolation;
-import org.mykhailomi.simulations.search.SearchUtils;
+import org.mykhailomi.light_control_schedule_simulation.linear_interpolation.LICoordinates;
+import org.mykhailomi.light_control_schedule_simulation.linear_interpolation.LinearInterpolation;
+import org.mykhailomi.light_control_schedule_simulation.search.SearchUtils;
 import org.springframework.stereotype.Component;
 
 @Component("illuminanceGenerator")

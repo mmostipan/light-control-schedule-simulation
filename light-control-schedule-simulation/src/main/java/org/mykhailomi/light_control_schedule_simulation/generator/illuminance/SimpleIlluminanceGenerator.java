@@ -1,4 +1,4 @@
-package org.mykhailomi.simulations.generator.illuminance;
+package org.mykhailomi.light_control_schedule_simulation.generator.illuminance;
 
 public interface SimpleIlluminanceGenerator {
 	

@@ -1,4 +1,4 @@
-package org.mykhailomi.simulations.conf;
+package org.mykhailomi.light_control_schedule_simulation.app.conf;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

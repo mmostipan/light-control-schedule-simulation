@@ -1,4 +1,4 @@
-package org.mykhailomi.simulations.function.linear_interpolation;
+package org.mykhailomi.light_control_schedule_simulation.linear_interpolation;
 
 import org.springframework.stereotype.Component;
 

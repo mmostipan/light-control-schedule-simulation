@@ -1,4 +1,4 @@
-package org.mykhailomi.simulations.search;
+package org.mykhailomi.light_control_schedule_simulation.search;
 
 public class SearchUtils {
 	

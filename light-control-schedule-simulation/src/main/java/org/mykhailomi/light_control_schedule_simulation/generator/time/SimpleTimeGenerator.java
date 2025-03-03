@@ -1,4 +1,4 @@
-package org.mykhailomi.simulations.generator.time;
+package org.mykhailomi.light_control_schedule_simulation.generator.time;
 
 public interface SimpleTimeGenerator {
 	
